@@ -20,6 +20,9 @@ const App = () => {
   const [movieList, setMovieList] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
   const [errorMessage, setErrorMessage] = useState('');
+  const [trendingMovies, setTrendingMovies] = useState([]);
+ 
+
 
   const fetchMovies = async (query = '') => {
     setIsLoading(true);
@@ -80,6 +83,26 @@ const App = () => {
           />
         </div>
       </header>
+
+      {/* Trending Movies Section */}
+      {/* <section>
+        <h2 className='section-heading'>Trending Movies</h2>
+        {isLoading ? (
+          <Spinner />
+        ) : errorMessage ? (
+          <p className="error-message">{errorMessage}</p>
+        ) : (
+          <ul className="movies-grid">
+            {trendingMovies.map((movie) => (
+              <MovieCard key={movie.movie_id} movie={{ 
+                id: movie.movie_id, 
+                title: movie.searchterm, 
+                poster_path: movie.poster_url 
+              }} />
+            ))}
+          </ul>
+        )}
+      </section> */}
 
       <section>
         <h2 className='section-heading'>All Movies</h2>
