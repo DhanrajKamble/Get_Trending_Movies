@@ -7,6 +7,14 @@ body {
   background-image: url(./hero-bg.png);
   color: aliceblue;
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed; /* Keeps background fixed while scrolling */
+  height: 100%; /* Covers entire page */
+  width: 100%;
+  margin: 0;
+  padding: 0;
 }
 
 .header-container {
@@ -36,7 +44,7 @@ body {
   }
 }
 
-span {
+.movie-span {
   background: linear-gradient(45deg, red, blue);
   background-clip: text;
   -webkit-background-clip: text;
@@ -77,4 +85,39 @@ span {
   background-color: transparent;
   border: none;
   color: aliceblue;
+}
+
+.movie-card-content{
+  padding: 0.5rem;
+  display: flex;
+}
+
+.poster{
+  width: 20rem;
+  border-radius: 15px;
+}
+
+.title{
+  font-size: 1.9rem;
+}
+
+.dot{
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  color: grey;
+}
+
+ul{
+  display: flex;
+  flex-wrap: wrap; /* Allows items to wrap to the next line */
+  gap: 20px; /* Adds space between items */
+  justify-content: center; /* Centers items */
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+.section-heading{
+  padding: 1rem;
+  font-size: 2rem;
+  margin-left: 3rem;
 }
